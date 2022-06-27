@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.vilagos{
+    background-image: url("img/binary-light.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+.sotet{
+    background-image: url("img/binary-dark.png");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* #portre{
+    width: 50%;
+} */
+
+.blur{
+    backdrop-filter: blur(5px);
+}
+
+.rolam{
+    background-image: url(img/pentablet.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+@media screen and (min-width: 576px) {
+    #kapcsolat{
+        margin:auto;
+        width: 576px;
+    }
+}
