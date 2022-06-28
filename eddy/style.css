@@ -17,7 +17,7 @@ body {
 @media screen and (max-width: 500px) {
     #kedo {
         background-image: url(img/dobo-szobor.png);
-        background-size: cover;
+        background-size: contain;
         background-repeat: repeat;
         background-position-y: center;
         background-position-x: center;
