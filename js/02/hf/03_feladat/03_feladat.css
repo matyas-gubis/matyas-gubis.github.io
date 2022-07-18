@@ -3,12 +3,14 @@ body{
     background-image: url(https://images.pexels.com/photos/259100/pexels-photo-259100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: cover;    
+    background-attachment: fixed;
 }
 
 .kereksarok {    
     border-radius: 30px !important;
     backdrop-filter: blur(10px);
     background-color: rgba(248, 117, 128, 0.314);
+    margin-bottom: 100px;
 }
 
 section{
