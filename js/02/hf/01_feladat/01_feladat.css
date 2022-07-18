@@ -8,4 +8,5 @@ body{
 .kereksarok {    
     border-radius: 30px !important;
     backdrop-filter: blur(10px);
+    background-color: rgba(117, 233, 248, 0.257);
 }

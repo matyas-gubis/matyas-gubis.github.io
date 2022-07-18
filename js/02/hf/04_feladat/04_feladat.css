@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    background-image: url(https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-image: url(https://images.pexels.com/photos/235922/pexels-photo-235922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: cover;    
 }
@@ -8,6 +8,7 @@ body{
 .kereksarok {    
     border-radius: 30px !important;
     backdrop-filter: blur(10px);
+    background-color: rgba(9, 116, 48, 0.257);
 }
 
 section{

@@ -8,6 +8,7 @@ body{
 .kereksarok {    
     border-radius: 30px !important;
     backdrop-filter: blur(10px);
+    background-color: rgba(245, 239, 179, 0.251);
 }
 
 section{
