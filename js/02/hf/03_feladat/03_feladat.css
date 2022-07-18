@@ -1,0 +1,15 @@
+body{
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/259100/pexels-photo-259100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.kereksarok {    
+    border-radius: 30px !important;
+    backdrop-filter: blur(10px);
+}
+
+section{
+    overflow: auto;
+}

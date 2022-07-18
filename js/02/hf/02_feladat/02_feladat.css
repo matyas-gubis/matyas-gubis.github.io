@@ -1,0 +1,15 @@
+body{
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.kereksarok {    
+    border-radius: 30px !important;
+    backdrop-filter: blur(10px);
+}
+
+section{
+    overflow: auto;
+}
