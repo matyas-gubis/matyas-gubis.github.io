@@ -1,0 +1,12 @@
+body {
+    background-image: url("coins.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.blur{
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    background-color: rgba(1, 1, 1, 0.322);
+}
