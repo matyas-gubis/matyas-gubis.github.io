@@ -46,7 +46,7 @@ alert("A számok négyzetei: " + csinaljSzovegetASzamokbol(szamokNegyzete));
 
 //2.g
 i = 0;
-while(i < szamok.length && szamok[i] < 10){
+while(i < szamok.length && szamok[i] <= 10){
     i++;
 }
 if(i < szamok.length){
