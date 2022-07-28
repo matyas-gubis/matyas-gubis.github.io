@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Szobafestő</title>
+</head>
+
+<body>
+    <section class="container">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-lg-6 col-xl-6 p-5 rounded rounded-5" id="box">
+                <h1 class="text-center text-primary text-uppercase mb-5">szobafestő - munkadíjkalkulátor</h1>
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="number" id="szobakOsszmerete" class="form-control"
+                            placeholder="Adja meg a szobák összméretét">
+                        <label for="szobakOsszmerete" class="">Adja meg a szobák összméretét <em>(nm-ben)</em></label>
+                    </div>
+                    <div class="form-floating pb-3 mb-3 border-bottom border-2">
+                        <select id="festesTipusa" class="form-control">
+                            <option value="-1" selected disabled>Kérem válasszon!</option>
+                            <option value="0">Sima felületre (3500 Ft/nm)</option>
+                            <option value="1">Kevés gletteléssel (4000 Ft/nm)</option>
+                            <option value="2">Teljes falfelület javítással (4500 Ft/nm)</option>
+                        </select>
+                        <label for="festesTipusa">Festés típusa:</label>
+                    </div>
+                    <h4>Ön új ügyél?</h4>
+                    <p><em>Meglévő ügyfeleknek 10% kedvezmény jár</em></p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ujUgyfel" id="ujUgyfel-1" checked>
+                        <label class="form-check-label" for="ujUgyfel-1">Új ügyfél vagyok.</label>
+                    </div>
+                    <div class="form-check pb-3 border-bottom border-2 mb-3">
+                        <input class="form-check-input" type="radio" name="ujUgyfel" id="ujUgyfel-2">
+                        <label class="form-check-label" for="ujUgyfel-2">Meglévő ügyfél vagyok. </label>
+                    </div>
+                    <h4>Sürgős?</h4>
+                    <p><em>Néhány napon belüli kivitelezésre is lehetőség van, ám ez 20% felárral jár!</em></p>
+                    <div class="form-check pb-3 border-bottom border-2 mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="surgos">
+                        <label class="form-check-label" for="surgos">Élek a sürgős lehetőséggel</label>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button type="button" class="btn btn-primary text-uppercase" id="szamol"
+                            onclick="szamolas()">Számol</button>
+                    </div>
+                    <div id="eredmenyHelye" hidden>
+                        <H4>Kalkulált összeg:</H4>
+                        <h4 id="eredmeny"></h4>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

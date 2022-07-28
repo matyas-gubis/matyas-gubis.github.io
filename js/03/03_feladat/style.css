@@ -1,0 +1,15 @@
+body {
+    background-image: url("room.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#box {
+    background-color: #faebd759;
+    backdrop-filter: blur(5px);
+}
+
+#szamol {
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.349) !important;
+}
