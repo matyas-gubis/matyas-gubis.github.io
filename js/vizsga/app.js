@@ -67,19 +67,31 @@ function CheckSavingTimeFilled(){
 }
 
 //checking if the entered value is indeed a whole number
-//this gets called whenever a button is released in the 'savingAmount' input field
+//this gets called whenever a button is released in the 'savingAmount' input field and when the "számol" button is clicked
 function CheckWholeNumber(){    
-    let wholeNumber = /^[0-9]+$/;
+    let wholeNumber = /^[0-9\-]+$/;    
     savingAmount = savingAmountInput.value;
     if(!(wholeNumber.test(savingAmount)) || savingAmount <= 0){
         wholeNumberAlert.hidden = false;
         savingAmountInput.classList.toggle("border-danger", true);
-        button.disabled = true;
     }else{
         wholeNumberAlert.hidden = true;
         savingAmountInput.classList.toggle("border-danger", false);
-        button.disabled = false;
+    }
+
+    if(!(wholeNumber.test(savingAmount))){        
+        document.getElementById("wholeNumber").hidden = false;                     
+    }else{        
+        document.getElementById("wholeNumber").hidden = true;        
     }    
+
+    if(savingAmount <= 0){
+        document.getElementById("greaterThanZero").hidden = false;
+    }else{
+        document.getElementById("greaterThanZero").hidden = true;
+    }
+
+    
 }
 
 //a quick function to get the selected goal, which is given by the radio buttons, and the values are collected to the "selectables" array

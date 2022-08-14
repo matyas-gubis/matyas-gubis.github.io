@@ -20,8 +20,14 @@
                 <h2 class="mb-3 text-uppercase text-center">Megtakarítás - kalkulátor</h2>
                 <form class="my-5">
                     <label for="savingAmount" class="form-label">Heti megtakarításod (Ft):</label>
-                    <input type="number" class="form-control mb-2" name="savingAmount" id="savingAmount" onkeyup="CheckWholeNumber()">
-                    <p class="text-light bg-danger rounded p-2 mb-4" id="wholeNumberAlert" hidden="true">A megadott érték csak 0-nál nagyobb egész szám lehet!</p>
+                    <input type="number" class="form-control mb-2" name="savingAmount" id="savingAmount">                    
+                    <div class="text-light bg-danger rounded pt-2 pb-1 mb-4" id="wholeNumberAlert" hidden>
+                        <ul>
+                            <li id="greaterThanZero" hidden>A megadott értéknek nagyobbnak kell lennie 0-nál!</li>
+                            <li id="wholeNumber" hidden>Egész számot adjon meg!</li>
+                        </ul>
+                    </div>
+                    
 
                     <label class="form-label" for="savingTime">Mennyi ideig spórolsz?</label>
                     <select class="form-select mb-4" name="savingTime" id="savingTime">
