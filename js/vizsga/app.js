@@ -17,6 +17,7 @@ let falseData = false;
 let allSavings = 0;
 let text = "";
 let result = document.getElementById("result");
+let formatter = Intl.NumberFormat('hu-HU');
 
 //these objects get called when the calculations and the displaying happen
 let bike = {name: "kerékpár", price: 100000};
@@ -69,8 +70,8 @@ function CheckSavingTimeFilled(){
     }
 }
 
-//checking if the entered value is indeed a whole number
-//this gets called whenever a button is released in the 'savingAmount' input field and when the "számol" button is clicked
+//checking if the entered value is indeed a positive whole number
+//this gets called when the "számol" button is clicked
 function CheckWholeNumber(){    
     let wholeNumber = /^[0-9\-]+$/;    
     savingAmount = savingAmountInput.value;
@@ -122,9 +123,9 @@ function Calculate(){
 //after all the branching, this function writes a message to the user based on the Calculate() function
 function Display(){
     if(Calculate()){
-        text = `<p>Önnek ${allSavings} megtakarítása van.</p><p>Ez az összeg sajnos nem elég, hogy egy ${SelectedGoal().name}t vásároljon. Még ${SelectedGoal().price-allSavings} Ft-ra van szüksége, amit heti ${savingAmount} Ft összeggel ${Math.ceil((SelectedGoal().price-allSavings)/savingAmount)} hét alatt tehet félre`;
+        text = `<p>Önnek ${formatter.format(allSavings)} Ft megtakarítása van.</p><p>Ez az összeg sajnos nem elég, hogy egy ${SelectedGoal().name}t vásároljon. Még ${formatter.format(SelectedGoal().price-allSavings)} Ft-ra van szüksége, amit heti ${formatter.format(savingAmount)} Ft összeggel ${Math.ceil((SelectedGoal().price-allSavings)/savingAmount)} hét alatt tehet félre`;
     }else{
-        text = `<p>Önnek ${allSavings} Ft megtakarítása van.</p><p>Ez az összeg elég arra, hogy vásároljon egy ${SelectedGoal().name}t.`;
+        text = `<p>Önnek ${formatter.format(allSavings)} Ft megtakarítása van.</p><p>Ez az összeg elég arra, hogy vásároljon egy ${SelectedGoal().name}t.`;
     }
     result.innerHTML = text;
 }
