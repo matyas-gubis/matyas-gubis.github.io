@@ -13,6 +13,7 @@ let wholeNumberAlert = document.getElementById("wholeNumberAlert");
 let goals = document.getElementsByName("goal");
 
 let missingData = true;
+let falseData = false;
 let allSavings = 0;
 let text = "";
 let result = document.getElementById("result");
@@ -37,7 +38,9 @@ function BtnClicked(){
     //if the data are correctly given, I calculate with them, and if not, I pop an alert
     if (missingData){
         alert("Hiányzó adatok!");
-    }else {        
+    }else if(falseData){
+        alert("Hibás adatok!");
+    }else{        
         Display();
     }
 }
@@ -74,9 +77,11 @@ function CheckWholeNumber(){
     if(!(wholeNumber.test(savingAmount)) || savingAmount <= 0){
         wholeNumberAlert.hidden = false;
         savingAmountInput.classList.toggle("border-danger", true);
+        falseData = true;
     }else{
-        wholeNumberAlert.hidden = true;
+        wholeNumberAlert.hidden = true;        
         savingAmountInput.classList.toggle("border-danger", false);
+        falseData = false;
     }
 
     if(!(wholeNumber.test(savingAmount))){        
