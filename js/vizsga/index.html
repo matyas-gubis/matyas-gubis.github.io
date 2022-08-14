@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="JavasScript szekció vizsgája" />
+    <meta name="author" content="Gubis Mátyás János">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Gubis Mátyás János Vizsga</title>
+</head>
+
+<body class="bg-secondary">
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 rounded-corner text-light p-5" >
+                <h2 class="mb-3 text-uppercase text-center">Megtakarítás - kalkulátor</h2>
+                <form class="my-5">
+                    <label for="savingAmount" class="form-label">Heti megtakarításod (Ft):</label>
+                    <input type="number" class="form-control mb-2" name="savingAmount" id="savingAmount" onkeyup="CheckWholeNumber()">
+                    <p class="text-light bg-danger rounded p-2 mb-4" id="wholeNumberAlert" hidden="true">A megadott érték csak 0-nál nagyobb egész szám lehet!</p>
+
+                    <label class="form-label" for="savingTime">Mennyi ideig spórolsz?</label>
+                    <select class="form-select mb-4" name="savingTime" id="savingTime">
+                        <option value="-1" selected disabled>Kérem válasszon</option>
+                        <option value="0">Fél év</option>
+                        <option value="1">Egy év</option>
+                        <option value="2">Három év</option>
+                        <option value="3">Öt év</option>
+                    </select>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="goal" id="bike" checked>
+                        <label class="form-check-label" for="bike">
+                        <i class="fa-solid fa-bicycle"></i> Kerékpár - 100.000 Ft
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="goal" id="phone">
+                        <label class="form-check-label" for="phone">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                            Telefon - 80.000 Ft
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="goal" id="console">
+                        <label class="form-check-label" for="console">
+                        <i class="fa-solid fa-gamepad"></i>
+                        Játékkonzol - 150.000 Ft
+                        </label>
+                    </div>
+                </form>
+                <div class="text-center mb-5">
+                    <button class="btn rounded btn-success text-uppercase" id="calculate" onclick="BtnClicked()">számol</button>
+                </div>             
+                <div id="result"></div>
+                
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+body {
+    height: 100vh;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.rounded-corner {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 110, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.btn {
+    box-shadow: 2px 2px 2px grey;
+}
