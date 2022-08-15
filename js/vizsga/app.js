@@ -3,7 +3,7 @@ let button = document.getElementById("calculate");
 
 let savingTimeInput = document.getElementById("savingTime")
 let savingTime = savingTimeInput.value;
-let savingTimeValues = [26, 52, 156, 260];
+let savingTimeValues = [{name: "fél év", weeks: 26},{name: "egy év", weeks: 52},{name: "három év", weeks: 156}, {name: "öt év", weeks: 260}];
 
 let savingAmountInput = document.getElementById("savingAmount");
 let savingAmount = Number(savingAmountInput.value);
@@ -112,9 +112,9 @@ function SelectedGoal(){
 //this function calculates if the saved amount is enought to buy the goal item, and returns a true or false value
 //it gets called in the Display() function
 function Calculate(){
-    allSavings = Number(savingAmount * savingTimeValues[savingTime]);
+    allSavings = Number(savingAmount * savingTimeValues[savingTime].weeks);
     if(SelectedGoal().price-allSavings > 0){
-        return true;        
+        return true;
     }else{
         return false;        
     }
@@ -123,9 +123,9 @@ function Calculate(){
 //after all the branching, this function writes a message to the user based on the Calculate() function
 function Display(){
     if(Calculate()){
-        text = `<p>Önnek ${formatter.format(allSavings)} Ft megtakarítása van.</p><p>Ez az összeg sajnos nem elég, hogy egy ${SelectedGoal().name}t vásároljon. Még ${formatter.format(SelectedGoal().price-allSavings)} Ft-ra van szüksége, amit heti ${formatter.format(savingAmount)} Ft összeggel ${Math.ceil((SelectedGoal().price-allSavings)/savingAmount)} hét alatt tehet félre`;
+        text = `<p>Önnek ${savingTimeValues[savingTime].name} múlva ${formatter.format(allSavings)} Ft megtakarítása lesz.</p><p>Ez az összeg sajnos nem lesz elég arra, hogy egy ${SelectedGoal().name}t vásároljon. Még ${formatter.format(SelectedGoal().price-allSavings)} Ft-ra van szüksége, amit heti ${formatter.format(savingAmount)} Ft összeggel ${Math.ceil((SelectedGoal().price-allSavings)/savingAmount)} hét alatt tehet félre`;
     }else{
-        text = `<p>Önnek ${formatter.format(allSavings)} Ft megtakarítása van.</p><p>Ez az összeg elég arra, hogy vásároljon egy ${SelectedGoal().name}t.`;
+        text = `<p>Önnek ${savingTimeValues[savingTime].name} múlva ${formatter.format(allSavings)} Ft megtakarítása lesz.</p><p>Ez az összeg elég lesz arra, hogy egy ${SelectedGoal().name}t vásároljon.`;
     }
     result.innerHTML = text;
 }
