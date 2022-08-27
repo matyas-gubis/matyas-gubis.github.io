@@ -121,18 +121,24 @@ p{
     border-color: #EED6C4;    
 }
 
-.tool:hover{
+.tool:hover,
+.tool:focus{
     color: #FFF3E4;
 }
 
-.task:hover .tools{
+.task:hover .tools,
+.task:active .tools{
     display: flex;
 }
+
 
 .task:hover{
     background-color: #d1b6a2;
 }
 
+.done{
+    text-decoration: line-through;
+}
 
 
 

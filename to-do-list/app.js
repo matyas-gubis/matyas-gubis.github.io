@@ -2,6 +2,8 @@ let addButton = document.getElementById("add");
 let inputField = document.getElementById("input");
 let tasks = document.getElementById("tasks");
 
+
+
 inputField.addEventListener('keyup', function (e) {
     if (e.key === "Enter") {
         e.preventDefault();
@@ -15,6 +17,10 @@ function add() {
     if (inputField.value != "") {
         let newItem = document.createElement('div');
         newItem.classList.add("task");
+
+        newItem.addEventListener('click', function(){
+            this.classList.toggle("done");
+        })
 
         let p = document.createElement('p');
         p.innerHTML = inputField.value;
