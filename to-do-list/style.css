@@ -104,16 +104,20 @@ p{
     right: 15px;
     display: flex;
     display: none;
-    width: 56px;
+    width: auto;
     height: 28px;    
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0px 10px;
     box-sizing: border-box;
     border-radius: 20px;
     background-color: #EED6C4;
     color: #6B4F4F;
     border: #FFF3E4 solid 1px;
+}
+
+.tool{
+    padding: 0px 2px;
 }
 
 .tools:hover{    
