@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+html{
+    background-color: black;    
+}
+
+.inventory{
+    background-color: #774360;
+    overflow: auto;
+    white-space: nowrap;
+    height: auto;
+    border-radius: 20px;
+}
+
+h1{
+    color:#E7AB79;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.card{
+    width: 120px;
+    min-height: 120px;    
+    height: fit-content;
+    background-color: #4C3A51;
+    border-radius: 20px;
+    margin: 10px;    
+    display: inline-block;
+    position: relative;
+    background-image: url('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png');
+    background-position: center;    
+    background-position-y: top;
+    background-repeat: no-repeat;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* background-size: cover; */
+}
+
+.card:first-of-type{
+    margin-left: 20px
+}
+
+.card:hover{
+    background-color: #302433;
+}
+
+.types{    
+    width: 90%;    
+    margin: 0px auto;
+}
+
+.types > p{    
+    background-color: #E7AB79;
+    margin: 2px 2px;
+    border-radius: 20px;
+    padding: 2px;    
+}
+
+.types > p:first-of-type{
+    margin-top: 110px;
+}
+.types > p:last-of-type{
+    margin-bottom: 5px;
+}
+
+.empty{
+    background: none;
+    background-color: #4C3A51;
+}
+.empty > *{
+    display: none;
+}
+
+.card #name{
+    position: absolute;
+    margin-top: 80px;
+    left: 60px;
+    padding: 2px;
+    transform: translateX(-50%);    
+    border-radius: 20px;
+    background-color: #E7AB79;    
+    font-weight: bold;     
+}
+.card #lvl{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+    background-color: #E7AB79;    
+    padding: 5px;
+
+}
+
+
+.current-pokemon{
+    position: absolute;
+    bottom: 10px;
+    background-color: #E7AB79;
+    width: 500px;
+    height: 200px;
+    border-radius: 150px; 
+    padding: 10px;        
+}
+
+.current-pokemon > .image{
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    border-radius: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.current-pokemon > h1{
+    color:#4C3A51;
+    position: absolute;    
+    left: 200px;
+    top: 1px;
+}
+
+.hp-outer{
+    border: #4C3A51 2px solid;
+    border-radius: 20px;
+    background-color: white;
+    width: 250px;  
+    height: 20px;  
+    margin-top: 50px;
+    margin-left: 1rem;
+    position: absolute;
+    left: 200px;
+    top: 1px;        
+}
+
+.hp-inner{
+    width: 10%;
+    height: 20px;
+    background-color: #774360;
+    border-radius: 20px;
+    text-align: center;
+    color: #E7AB79;
+}
+
+.exp-outer{
+    border: #4C3A51 2px solid;
+    border-radius: 20px;
+    width: 250px;  
+    height: 20px;  
+    margin-top: 50px;
+    margin-left: 1rem;
+    position: absolute;
+    left: 200px;
+    top: 30px;        
+}
+
+.exp-inner{
+    width: 100%;
+    height: 20px;
+    background-color: #774360;
+    border-radius: 20px;
+    text-align: center;
+    color: #E7AB79;
+}
+
+.current-pokemon > .image{
+    background: url("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+
+}
+
+.fight{    
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;    
+    align-items: center;
+    align-content: center; 
+    margin-top: -270px;   
+}
+
+@media screen and (max-width: 510px) {
+    .current-pokemon{
+        width: 350px;
+        height: 100px;
+    }
+    .current-pokemon > .image{
+        width: 100px;
+        height: 100px;
+        margin-top: 0;
+        margin-left: 0px;
+    }
+
+    .current-pokemon > h1,
+    .current-pokemon > .hp-outer,
+    .current-pokemon > .exp-outer{
+        left: 110px;
+        width: 150px;
+    }
+
+    .fight{
+        margin-top: -200px;
+    }
+}
