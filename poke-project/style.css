@@ -324,4 +324,8 @@ h1{
     .fight{
         margin-top: -200px;
     }
+
+    .poke-ball{
+        background-color: red;
+    }
 }
