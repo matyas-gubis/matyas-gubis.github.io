@@ -166,11 +166,14 @@ h1{
 }
 
 .poke-ball:hover .poke-ball-top,
-.poke-ball:active .poke-ball-top{
+.poke-ball:active .poke-ball-top,
+.poke-ball:focus .poke-ball-top{
     transform: translateY(-50px);    
 }
 
-.poke-ball:hover .poke-ball-bottom{
+.poke-ball:hover .poke-ball-bottom,
+.poke-ball:active .poke-ball-bottom,
+.poke-ball:focus .poke-ball-bottom{
     transform: translateY(50px);    
 }
 
@@ -332,5 +335,9 @@ h1{
 
     .fight{
         margin-top: -200px;
-    }    
+    }   
+    
+    #poke-ball-1{
+        
+    }
 }
