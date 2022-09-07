@@ -60,6 +60,10 @@ function selectPokemon(pokemonName){
     addCard(pokemonName);    
 }
 
+function showConfirmButton(){
+    
+}
+
 
 
 
