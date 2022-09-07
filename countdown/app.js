@@ -6,7 +6,7 @@ function showTime(){
     let andras = new Date(2022, 09, 08, 22, 15, 0, 0);    
     let eredmeny = andras.getTime() - today.getTime(); 
     let datum = new Date(eredmeny)      
-    result.innerHTML = `${datum.getDate()}&nbspnap ${datum.getHours()-1}&nbspóra ${datum.getMinutes()}&nbspperc és ${datum.getSeconds()}&nbspmp`;
+    result.innerHTML = `${datum.getDate()}&nbspnap ${datum.getHours()}&nbspóra ${datum.getMinutes()}&nbspperc és ${datum.getSeconds()}&nbspmp`;
 
     setInterval(showTime, 1000);
 
