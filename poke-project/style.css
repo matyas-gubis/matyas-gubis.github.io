@@ -124,9 +124,11 @@ h1{
     width: 150px;
     height: 75px;
     border-radius: 200px 200px 0 0;
+    -webkit-border-radius: 200px 200px 0 0;    
     background-color: red;
     outline: black 10px solid;        
     transition: ease 1s;   
+    
     z-index: 1;  
 }
 
@@ -136,6 +138,7 @@ h1{
     width: 150px;
     height: 75px;
     border-radius: 0 0 200px 200px;
+    -webkit-border-radius: 0 0 200px 200px;
     background-color: white;
     outline: black 10px solid;            
     transition: ease 1s; 
@@ -323,9 +326,5 @@ h1{
 
     .fight{
         margin-top: -200px;
-    }
-
-    .poke-ball{
-        background-color: red;
-    }
+    }    
 }
