@@ -53,21 +53,21 @@
     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/132.png" alt="" hidden>
 </div>
 <div class="choose-one">
-    <div class="poke-ball" id="poke-ball-1" onclick="selectPokemon('charmander')">       
+    <div class="poke-ball poke-ball-1" onclick="selectPokemon('charmander')">       
         <div class="poke-ball-bottom">
             <div class="poke-ball-center"></div>
         </div>
         <div class="poke-ball-top"></div> 
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="">
     </div>
-    <div class="poke-ball" id="poke-ball-2" onclick="selectPokemon('bulbasaur')">
+    <div class="poke-ball poke-ball-2" onclick="selectPokemon('bulbasaur')">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
         <div class="poke-ball-top"></div>        
         <div class="poke-ball-bottom">
             <div class="poke-ball-center"></div>
         </div>
     </div>
-    <div class="poke-ball" id="poke-ball-3" onclick="selectPokemon('squirtle')">
+    <div class="poke-ball poke-ball-3" onclick="selectPokemon('squirtle')">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="">
         <div class="poke-ball-top"></div>        
         <div class="poke-ball-bottom">
@@ -76,28 +76,28 @@
     </div>
 </div>
 <div class="choose-one mobile">
-    <div class="poke-ball" id="poke-ball-1" onclick="">       
+    <div class="poke-ball mobile poke-ball-1" onclick="mobileSelectPokemon('charmander')">       
         <div class="poke-ball-bottom">
             <div class="poke-ball-center"></div>
         </div>
         <div class="poke-ball-top"></div> 
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="">
     </div>
-    <div class="poke-ball" id="poke-ball-2" onclick="">
+    <div class="poke-ball mobile poke-ball-2" onclick="mobileSelectPokemon('bulbasaur')">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
         <div class="poke-ball-top"></div>        
         <div class="poke-ball-bottom">
             <div class="poke-ball-center"></div>
         </div>
     </div>
-    <div class="poke-ball" id="poke-ball-3" onclick="">
+    <div class="poke-ball mobile poke-ball-3" onclick="mobileSelectPokemon('squirtle')">
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="">
         <div class="poke-ball-top"></div>        
         <div class="poke-ball-bottom">
             <div class="poke-ball-center"></div>
         </div>
     </div>
-    <button id="confirm">Confirm</button>
+    <button id="confirm" hidden type="button" onclick="choose()">I chose you</button>
 </div>
 
 

@@ -194,15 +194,15 @@ h1{
     height: 305px;         
 }
 
-#poke-ball-1{
+.poke-ball-1{
     position: absolute;
     left: 100px
 }
-#poke-ball-2{
+.poke-ball-2{
     position: absolute;
     top: 150px;
 }
-#poke-ball-3{
+.poke-ball-3{
     position: absolute;
     top: 150px;
     left: 200px;
@@ -298,6 +298,20 @@ h1{
     display: none;
 }
 
+#confirm{
+    position: absolute;
+    background-color: #E7AB79;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    left: 180px;
+    transform: translateX(-50%);
+    bottom: -80px;
+    font-size: 1rem;
+    color: #1B2430;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 510px) {
     .current-pokemon{
         width: 350px;
@@ -340,13 +354,14 @@ h1{
     .fight{
         margin-top: -200px;
     }   
-    
-    #poke-ball-1{
-        
+    .choose-one{
+        display: none;
     }
 
     .mobile{
         display: block;
     }
+
+    
 }
 

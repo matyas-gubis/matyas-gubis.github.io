@@ -52,7 +52,8 @@ function addCard(pokemonName){
     xhr.send();
 };
 
-function selectPokemon(pokemonName){    
+function selectPokemon(pokemonName){  
+    
     document.querySelector(".inventory").hidden = false;
     document.querySelector(".current-pokemon").hidden = false;
     document.querySelector(".fight").style.display = "flex";
@@ -60,8 +61,17 @@ function selectPokemon(pokemonName){
     addCard(pokemonName);    
 }
 
-function showConfirmButton(){
-    
+var chosenPokemon = "";
+
+function choose(){
+    selectPokemon(chosenPokemon);
+    document.querySelector('.mobile').style.display = "none";
+}
+
+function mobileSelectPokemon(pokemonName){
+    document.querySelector("#confirm").hidden = false;
+    chosenPokemon = pokemonName;   
+     
 }
 
 
