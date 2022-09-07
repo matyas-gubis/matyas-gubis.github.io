@@ -126,7 +126,9 @@ h1{
     border-radius: 200px 200px 0 0;
     -webkit-border-radius: 200px 200px 0 0;    
     background-color: red;
-    outline: black 10px solid;        
+    /* outline: black 10px solid;         */
+    box-shadow: 0 0 0 10px;
+    -webkit-box-shadow: 0 0 0 10px;
     transition: ease 1s;   
     
     z-index: 1;  
@@ -140,7 +142,9 @@ h1{
     border-radius: 0 0 200px 200px;
     -webkit-border-radius: 0 0 200px 200px;
     background-color: white;
-    outline: black 10px solid;            
+    /* outline: black 10px solid;    */
+    box-shadow: 0 0 0 10px;
+    -webkit-box-shadow: 0 0 0 10px;
     transition: ease 1s; 
     z-index: 2;
 }
@@ -152,7 +156,9 @@ h1{
     background-color: white;        
     border-radius: 50%;  
     left: 50%;
-    outline: black 5px solid;
+    /* outline: black 5px solid; */
+    box-shadow: 0 0 0 10px;
+    -webkit-box-shadow: 0 0 0 5px;
     top: -25px;
     transform: translateX(-50%);
     z-index: 100;
