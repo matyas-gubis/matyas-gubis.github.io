@@ -3,7 +3,8 @@ let result = document.querySelector('h1');
 showTime();
 function showTime(){
     let today = new Date();
-    let andras = new Date(2022, 08, 09, 22, 15, 0, 0);    
+    let andras = new Date("2022-09-08:23:15"); 
+    //2022, 09, 08, 22, 15, 0, 0   
     let eredmeny = andras.getTime() - today.getTime(); 
     let datum = new Date(eredmeny)     
     let oneDay = 1000*60*60*24;
@@ -20,6 +21,12 @@ function showTime(){
     if(days < 1){
         setColorRed();
     }   
+
+    if(days < 1 && hours == 0){
+        result.innerHTML = "Hurrá megjöttél! 🎉🥳❤";
+        document.querySelectorAll("h2").forEach((element)=>element.style.display = "none");
+    }
+    
     
     setInterval(showTime, 1000);
 }
