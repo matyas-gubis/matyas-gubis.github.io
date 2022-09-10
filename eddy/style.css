@@ -6,6 +6,8 @@ body {
 #kezdo {
     background-image: url(img/dobo-szobor.png);
     background-size: cover;
+    -webkit-background-size: cover;
+    -webkit-background-attachment: fixed;
     background-repeat: repeat;
     background-position-y: center;
     background-position-x: center;
@@ -18,6 +20,8 @@ body {
     #kedo {
         background-image: url(img/dobo-szobor.png);
         background-size: contain;
+        -webkit-background-size: contain;
+        -webkit-background-attachment: fixed;
         background-repeat: repeat;
         background-position-y: center;
         background-position-x: center;
@@ -26,6 +30,7 @@ body {
     }
     #headline {
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         margin-top: 30rem;
     
     }
